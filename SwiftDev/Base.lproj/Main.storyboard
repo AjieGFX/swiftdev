@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftDev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What it do!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F49-U2-o5b">
+                                <rect key="frame" x="145" y="45" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-Rn-Tzt">
+                                <rect key="frame" x="154" y="85" width="67" height="30"/>
+                                <state key="normal" title="PUSH ME"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j6z-ov-aUy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B23-Ay-ZWn">
+                                <rect key="frame" x="130" y="130" width="115" height="30"/>
+                                <state key="normal" title="THEN, PUSH ME"/>
+                                <connections>
+                                    <action selector="secondTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdi-DL-7Rf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B23-Ay-ZWn" firstAttribute="top" secondItem="gtd-Rn-Tzt" secondAttribute="bottom" constant="15" id="4mt-8R-IAh"/>
+                            <constraint firstItem="gtd-Rn-Tzt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="8Hz-YM-FKL"/>
+                            <constraint firstItem="F49-U2-o5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FOI-MC-YzO"/>
+                            <constraint firstItem="gtd-Rn-Tzt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJq-1f-oaz"/>
+                            <constraint firstItem="B23-Ay-ZWn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qBG-EW-wPO"/>
+                            <constraint firstItem="F49-U2-o5b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="tC7-pO-ylg"/>
+                            <constraint firstItem="gtd-Rn-Tzt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uEM-0k-D1x"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coolLabel" destination="F49-U2-o5b" id="lrp-nn-QlX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-30" y="101"/>
         </scene>
     </scenes>
 </document>
