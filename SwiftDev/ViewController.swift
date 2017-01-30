@@ -3,7 +3,7 @@
 //  SwiftDev
 //
 //  Created by AjieGFX on 1/27/17.
-//  Copyright © 2017 AjieGFX. All rights reserved.
+//  Copyright © 2017 AjieGFX. All rights reserved..
 //
 
 import UIKit
